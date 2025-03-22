@@ -11,7 +11,8 @@ public class ClassTouch : MonoBehaviour
 
     Color _currentWork;
 
-    GameObject _currentToInstance;
+    GameObject _currentInstance;
+    [SerializeField]GameObject _currentToInstance;
     void Update()
     {
        
@@ -44,7 +45,7 @@ public class ClassTouch : MonoBehaviour
 
     public void GetImage()
     {
-        _currentSprite = null; // Limpiar antes de asignar
+        //_currentSprite = null; // Limpiar antes de asignar
         Image buttonImage = GetComponent<Image>();
         if (buttonImage.sprite != null)
         {
@@ -75,6 +76,28 @@ public class ClassTouch : MonoBehaviour
 
         Debug.Log("Objeto creado en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);
     }
+    private void SpawnImage(Vector3 position)
+    {
+        /*if (_currentSprite == null)
+        {
+            // Debug.LogError("No hay imagen seleccionada para spawnear.");
+            return;
+        }
 
-   
+        Debug.Log("color " + _currentColor);
+        Image newShape = new Image;
+        newShape.transform.position = position;
+
+
+        _currentToInstance = newShape;
+        SpriteRenderer spriteRenderer = _currentToInstance.AddComponent<SpriteRenderer>();
+        spriteRenderer.color = _currentColor;
+        spriteRenderer.sprite = _currentSprite;
+
+        _shapesCreated.Add(newShape);
+
+        Debug.Log("Objeto creado en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);*/
+    }
+
+
 }
