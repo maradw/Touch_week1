@@ -7,12 +7,13 @@ public class ClassTouch : MonoBehaviour
 {
     List<GameObject> _shapesCreated = new List<GameObject>();
     Sprite _currentSprite;
-    static Color _currentColor = Color.white; 
-
+    static Color _currentColor = Color.white;
+    [SerializeField] public Transform parentCanvas; 
     Color _currentWork;
 
-    GameObject _currentInstance;
-    [SerializeField]GameObject _currentToInstance;
+     GameObject _currentInstance;
+    [SerializeField]GameObject imagePrefab;
+    //[SerializeField] GameObject _currentToInstance;
     void Update()
     {
        
@@ -24,7 +25,7 @@ public class ClassTouch : MonoBehaviour
             {
                 
                 Vector3 worldPos = GetWorldPosition(touch.position);
-                SpawnShape(worldPos);
+                SpawnImage(worldPos);
             }
         }
     }
@@ -54,7 +55,7 @@ public class ClassTouch : MonoBehaviour
         }
     }
 
-    private void SpawnShape(Vector3 position)
+    /*private void SpawnShape(Vector3 position)
     {
         if (_currentSprite == null)
         {
@@ -67,7 +68,7 @@ public class ClassTouch : MonoBehaviour
         newShape.transform.position = position;
 
 
-        _currentToInstance = newShape;
+        //_currentToInstance = newShape;
         SpriteRenderer spriteRenderer = _currentToInstance.AddComponent<SpriteRenderer>();
         spriteRenderer.color = _currentColor;
         spriteRenderer.sprite = _currentSprite;
@@ -75,28 +76,26 @@ public class ClassTouch : MonoBehaviour
         _shapesCreated.Add(newShape); 
 
         Debug.Log("Objeto creado en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);
-    }
+    }*/
     private void SpawnImage(Vector3 position)
     {
-        /*if (_currentSprite == null)
+        if (_currentSprite == null || imagePrefab == null || parentCanvas == null)
         {
-            // Debug.LogError("No hay imagen seleccionada para spawnear.");
+            Debug.LogError("Falta asignar el sprite, el prefab o el canvas.");
             return;
         }
 
-        Debug.Log("color " + _currentColor);
-        Image newShape = new Image;
-        newShape.transform.position = position;
+        _currentInstance = Instantiate(imagePrefab, parentCanvas);
+        _currentInstance.transform.position = position;
 
+        Image imageComponent = _currentInstance.GetComponent<Image>();
+        if (imageComponent != null)
+        {
+            imageComponent.sprite = _currentSprite;
+            imageComponent.color = _currentColor;
+        }
 
-        _currentToInstance = newShape;
-        SpriteRenderer spriteRenderer = _currentToInstance.AddComponent<SpriteRenderer>();
-        spriteRenderer.color = _currentColor;
-        spriteRenderer.sprite = _currentSprite;
-
-        _shapesCreated.Add(newShape);
-
-        Debug.Log("Objeto creado en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);*/
+        Debug.Log("Imagen creada en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);
     }
 
 

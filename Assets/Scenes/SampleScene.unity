@@ -267,6 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 1173063322}
+  imagePrefab: {fileID: 7127743324494609677, guid: 7c150b9757b73684aad384ea8dc23a53,
+    type: 3}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 0}
+  imagePrefab: {fileID: 0}
 --- !u!1 &797282867
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 0}
+  imagePrefab: {fileID: 0}
 --- !u!1 &799584113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 1173063322}
+  imagePrefab: {fileID: 7127743324494609677, guid: 7c150b9757b73684aad384ea8dc23a53,
+    type: 3}
 --- !u!1 &1021812204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 1173063322}
+  imagePrefab: {fileID: 7127743324494609677, guid: 7c150b9757b73684aad384ea8dc23a53,
+    type: 3}
 --- !u!1 &1173063318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1593,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 1173063322}
+  imagePrefab: {fileID: 7127743324494609677, guid: 7c150b9757b73684aad384ea8dc23a53,
+    type: 3}
 --- !u!1 &1251816840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +1741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 0}
+  imagePrefab: {fileID: 0}
 --- !u!1 &1958413625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,6 +1888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 0}
+  imagePrefab: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
