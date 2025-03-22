@@ -57,30 +57,23 @@ public class ClassTouch : MonoBehaviour
     {
         if (_currentSprite == null)
         {
+           // Debug.LogError("No hay imagen seleccionada para spawnear.");
             return;
         }
+        
+        Debug.Log("color " + _currentColor);
+        GameObject newShape = new GameObject("SpawnedObject"); 
+        newShape.transform.position = position;
 
-        if (_currentToInstance != null)
-        {
-            // Si ya hay una forma creada, solo cambia su sprite y color
-            SpriteRenderer spriteRenderer = _currentToInstance.GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = _currentSprite;
-            spriteRenderer.color = _currentColor;
-        }
-        else
-        {
-            // Si no hay una forma creada, crea una nueva
-            _currentToInstance = new GameObject("SpawnedObject");
-            _currentToInstance.transform.position = position;
 
-            SpriteRenderer spriteRenderer = _currentToInstance.AddComponent<SpriteRenderer>();
-            spriteRenderer.sprite = _currentSprite;
-            spriteRenderer.color = _currentColor;
+        _currentToInstance = newShape;
+        SpriteRenderer spriteRenderer = _currentToInstance.AddComponent<SpriteRenderer>();
+        spriteRenderer.color = _currentColor;
+        spriteRenderer.sprite = _currentSprite;
 
-            _shapesCreated.Add(_currentToInstance);
-        }
+        _shapesCreated.Add(newShape); 
 
-        Debug.Log("Imagen actualizada: " + _currentSprite.name);
+        Debug.Log("Objeto creado en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);
     }
 
    
