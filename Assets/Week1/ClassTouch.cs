@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class ClassTouch : MonoBehaviour
 {
-     List<GameObject> _shapesCreated = new List<GameObject>();
-     Sprite _currentSprite;
-    static Color _currentColor = Color.white; // Color seleccionado
+    List<GameObject> _shapesCreated = new List<GameObject>();
+    Sprite _currentSprite;
+    static Color _currentColor = Color.white; 
 
     Color _currentWork;
+
+    GameObject _currentToInstance;
     void Update()
     {
-        // Detectar toque en la pantalla
+       
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0); 
@@ -42,34 +44,43 @@ public class ClassTouch : MonoBehaviour
 
     public void GetImage()
     {
-        Image buttonImage = GetComponent<Image>(); 
-        _currentSprite = buttonImage.sprite; 
-        Debug.Log("imagen  " + _currentSprite.name );
+        _currentSprite = null; // Limpiar antes de asignar
+        Image buttonImage = GetComponent<Image>();
+        if (buttonImage.sprite != null)
+        {
+            _currentSprite = buttonImage.sprite;
+            Debug.Log("Nueva imagen seleccionada: " + _currentSprite.name);
+        }
     }
 
     private void SpawnShape(Vector3 position)
     {
         if (_currentSprite == null)
         {
-           // Debug.LogError("No hay imagen seleccionada para spawnear.");
             return;
         }
-        
-        Debug.Log("color " + _currentColor);
-        GameObject newShape = new GameObject("SpawnedObject"); 
-        newShape.transform.position = position;
 
-       
-        //spriteRenderer.sprite = _currentSprite;
-        //spriteRenderer.color = _currentColor;
+        if (_currentToInstance != null)
+        {
+            // Si ya hay una forma creada, solo cambia su sprite y color
+            SpriteRenderer spriteRenderer = _currentToInstance.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = _currentSprite;
+            spriteRenderer.color = _currentColor;
+        }
+        else
+        {
+            // Si no hay una forma creada, crea una nueva
+            _currentToInstance = new GameObject("SpawnedObject");
+            _currentToInstance.transform.position = position;
 
-        SpriteRenderer spriteRenderer = newShape.AddComponent<SpriteRenderer>();
-        spriteRenderer.color = _currentColor;
-        spriteRenderer.sprite = _currentSprite;
-            
+            SpriteRenderer spriteRenderer = _currentToInstance.AddComponent<SpriteRenderer>();
+            spriteRenderer.sprite = _currentSprite;
+            spriteRenderer.color = _currentColor;
 
-        _shapesCreated.Add(newShape); 
-        Debug.Log("Objeto creado en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);
+            _shapesCreated.Add(_currentToInstance);
+        }
+
+        Debug.Log("Imagen actualizada: " + _currentSprite.name);
     }
 
    
