@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class ClassTouch : MonoBehaviour
 {
-    private List<GameObject> _shapesCreated = new List<GameObject>();
-    private Sprite _currentSprite; 
-    private Color _currentColor = Color.white; // Color seleccionado
+     List<GameObject> _shapesCreated = new List<GameObject>();
+     Sprite _currentSprite;
+    static Color _currentColor = Color.white; // Color seleccionado
+
     Color _currentWork;
     void Update()
     {
@@ -45,8 +46,6 @@ public class ClassTouch : MonoBehaviour
         _currentSprite = buttonImage.sprite; 
         Debug.Log("imagen  " + _currentSprite.name );
     }
-
-   
 
     private void SpawnShape(Vector3 position)
     {
