@@ -1,65 +1,77 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
-namespace Assets.Week1
+public class ClassTouch : MonoBehaviour
 {
-    public class ClassTouch : MonoBehaviour
+    private List<GameObject> _shapesCreated = new List<GameObject>();
+    private Sprite _currentSprite; 
+    private Color _currentColor = Color.white; // Color seleccionado
+    Color _currentWork;
+    void Update()
     {
-        [SerializeField] GameObject[] _colors;
-        [SerializeField] GameObject[] _images;
-        [SerializeField] public Image mySpr;
-        private Button oño;
-
-        Color _currentColor;
-        //SpriteTG  _curretSprite;
-
-        // Use this for initialization
-        void Start()
+        // Detectar toque en la pantalla
+        if (Input.touchCount > 0)
         {
-            oño = GetComponent<Button>();
+            Touch touch = Input.GetTouch(0); 
 
-            Debug.Log("NOSE");
-            for (int i = 0; i < _colors.Length; i++) 
+            if (touch.phase == TouchPhase.Began)
             {
-                //_colors[i].tintColor = Color.white;
-            }
-           // Debug.Log("ola" + mySpr.name);
-
-        }
-        
-        // Update is called once per frame
-        void Update()
-        {
-           // Instantiate(_images[1]);
-            if (Input.touchCount > 0)
-            {
-               // Instantiate(_images[1]);
-                Touch currentTouch = Input.GetTouch(0);
-                //Instantiate(_images[1]);
-                if (currentTouch.phase == TouchPhase.Began)
-                {
-                   // Debug.Log("Touch");
-
-                }
-            }
-            
-        }
-        void InstantiateImage()
-        {
-            Instantiate(_images[1]);
-        }
-        public void GetImage()
-        {
-            if(mySpr == null)
-            {
-                mySpr = _images[1].GetComponent<Image>();
-                Debug.Log("cambio?" + mySpr.name);
                 
+                Vector3 worldPos = GetWorldPosition(touch.position);
+                SpawnShape(worldPos);
             }
-            //mySpr = _images[1].GetComponent<Image>() ;
-            //Debug.Log("cambio?" + mySpr.name);
-
         }
     }
+
+    private Vector2 GetWorldPosition(Vector2 touchPosition)
+    {
+        
+        return Camera.main.ScreenToWorldPoint(touchPosition);
+    }
+
+    public void GetColor()
+    {
+        Image buttonImage = GetComponent<Image>();
+        _currentColor = buttonImage.color;
+        Debug.Log("color " + _currentColor);
+        // return _currentWork;
+    }
+
+    public void GetImage()
+    {
+        Image buttonImage = GetComponent<Image>(); 
+        _currentSprite = buttonImage.sprite; 
+        Debug.Log("imagen  " + _currentSprite.name );
+    }
+
+   
+
+    private void SpawnShape(Vector3 position)
+    {
+        if (_currentSprite == null)
+        {
+           // Debug.LogError("No hay imagen seleccionada para spawnear.");
+            return;
+        }
+        
+        Debug.Log("color " + _currentColor);
+        GameObject newShape = new GameObject("SpawnedObject"); 
+        newShape.transform.position = position;
+
+       
+        //spriteRenderer.sprite = _currentSprite;
+        //spriteRenderer.color = _currentColor;
+
+        SpriteRenderer spriteRenderer = newShape.AddComponent<SpriteRenderer>();
+        spriteRenderer.color = _currentColor;
+        spriteRenderer.sprite = _currentSprite;
+            
+
+        _shapesCreated.Add(newShape); 
+        Debug.Log("Objeto creado en posición: " + position + " con imagen: " + _currentSprite.name + " y color: " + _currentColor);
+    }
+
+   
 }
