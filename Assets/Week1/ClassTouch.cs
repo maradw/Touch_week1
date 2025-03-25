@@ -2,12 +2,16 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Assets.Week1;
+using UnityEngine.InputSystem;
 
 public class ClassTouch : MonoBehaviour
 {
     [SerializeField] static List<GameObject> _shapesCreated = new List<GameObject>();
     [SerializeField] GameObject _prefab;
     [SerializeField] GameObject trailPrefab;
+    [SerializeField] GameImage[] _gameImage;
+    [SerializeField] GameColors[] _gameColor;
     GameObject _currentTrail;
     GameObject _selectedObject;
 
@@ -20,31 +24,70 @@ public class ClassTouch : MonoBehaviour
     bool _swipe = false;
    // bool _createShape = false;
 
+    //private TouchControl _touchControl;
+    private void Awake()
+    {
+        //_touchControl = new TouchControl();
+    }
+
+    private void OnEnable()
+    {
+        //_touchControl.ReadValue();
+        //Debug.Log(_touchControl.ReadValue());
+    }
+    private void OnDisable()
+    {
+
+    }
+
+    public void OnTap(InputAction.CallbackContext tap)
+    {
+        Debug.Log("d");
+       // if (tap.started) 
+        
+            Vector2 touchPos = tap.ReadValue<Vector2>();
+            Vector3 getWorld = GetWorldPosition(touchPos);
+            Debug.Log("Toque en: " + touchPos);
+            Debug.Log("realWorld: " +  getWorld);
+        SpawnShape(getWorld);
+    }
+    public void OnPress(InputAction.CallbackContext press)
+    {
+
+        //Vector2 touchPos = tap.ReadValue<Vector2>();
+
+        /*Debug.Log("Toque en: " + touchPos);
+        Debug.Log("realWorld: " + getWorld);
+        SpawnShape(GetWorldPosition(touchPos));*/
+    }
     private void Update()
     {
-        if (Input.touchCount > 0)
+        /*if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+            Debug.Log("z");
             Vector3 worldPos = GetWorldPosition(touch.position);
 
             switch (touch.phase)
             {
-                case TouchPhase.Began:
+                /*case TouchPhase.Began:
                     HandleTouchBegan(worldPos);
                     break;
                 case TouchPhase.Moved:
+                    Debug.Log("moved");
                     HandleTouchMoved(worldPos);
                     break;
                 case TouchPhase.Ended:
                     HandleTouchEnded();
                     break;
             }
-        }
+        }*/
     }
     Vector2 GetWorldPosition(Vector2 touchPosition)
     {
         return Camera.main.ScreenToWorldPoint(touchPosition);
     }
+ 
 
     private void HandleTouchBegan(Vector3 worldPos)
     {
@@ -57,7 +100,7 @@ public class ClassTouch : MonoBehaviour
         }
         else
         {
-
+            Debug.Log("handlebegan");
             //if (_createShape == true)
             {
                 SpawnShape(worldPos);
@@ -99,6 +142,7 @@ public class ClassTouch : MonoBehaviour
 
     private void SpawnShape(Vector3 position)
     {
+        Debug.Log("spawn");
         if (_currentSprite == null) return;
         GameObject newShape = Instantiate(_prefab, position, Quaternion.identity);
         newShape.GetComponent<SpriteRenderer>().sprite = _currentSprite;
@@ -165,5 +209,15 @@ public class ClassTouch : MonoBehaviour
         
             _currentSprite = buttonImage.sprite;
 
+    }
+    public void SetSelecctedColor(int x) //obtencion de datos
+    {
+        _currentColor = _gameColor[x]._colorData;
+        Debug.Log("actual" + _currentSprite.name);
+    }
+    public void SetSelectedImage(int i)
+    {
+        _currentSprite = _gameImage[i]._gameImage;
+        Debug.Log("actual" + _currentSprite.name);
     }
 }

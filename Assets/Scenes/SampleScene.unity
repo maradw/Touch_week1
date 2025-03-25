@@ -205,14 +205,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 229929548}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetImage
-        m_Mode: 1
+        m_MethodName: SetSelectedImage
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -262,13 +262,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229929543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 3604223008768857084, guid: 047b563e1a374ed40ab1d28c9a77efc3, type: 3}
   trailPrefab: {fileID: 0}
+  _gameImage: []
+  _gameColor: []
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,14 +752,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 771542943}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetColor
-        m_Mode: 1
+        m_MethodName: SetSelecctedColor
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -807,13 +809,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771542938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
   trailPrefab: {fileID: 0}
+  _gameImage: []
+  _gameColor: []
 --- !u!1 &797282867
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,14 +901,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 797282872}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetColor
-        m_Mode: 1
+        m_MethodName: SetSelecctedColor
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -954,13 +958,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797282867}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
   trailPrefab: {fileID: 0}
+  _gameImage: []
+  _gameColor: []
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,14 +1099,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 920034769}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetImage
-        m_Mode: 1
+        m_MethodName: SetSelectedImage
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1150,13 +1156,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920034764}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 4599792646502112130, guid: 618edf0e65c258c4e90b37bc186a3fcd, type: 3}
   trailPrefab: {fileID: 0}
+  _gameImage: []
+  _gameColor: []
 --- !u!1 &1021812204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,14 +1248,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1021812209}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetImage
-        m_Mode: 1
+        m_MethodName: SetSelectedImage
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1297,13 +1305,131 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021812204}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 8992838885101222000, guid: 51baaf60e3f4d71459b3d3efeee158e8, type: 3}
   trailPrefab: {fileID: 0}
+  _gameImage: []
+  _gameColor: []
+--- !u!1 &1140432035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140432037}
+  - component: {fileID: 1140432036}
+  - component: {fileID: 1140432038}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1140432036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140432035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 6002189062251155254, guid: 9727ed8ae29005040b4ec1849ee3b3dc, type: 3}
+  trailPrefab: {fileID: 0}
+  _gameImage:
+  - {fileID: 11400000, guid: fd38286d70e029f42b569c9d6ec56656, type: 2}
+  - {fileID: 11400000, guid: 50217254d02329b4dad714245d38cccb, type: 2}
+  - {fileID: 11400000, guid: d05bd4860fda6f046a521e5d50891656, type: 2}
+  - {fileID: 11400000, guid: c782fdc5fc2bd6c4c899a0db7d66fecd, type: 2}
+  _gameColor:
+  - {fileID: 11400000, guid: 027af2c9502ffb248ba6b9c2584b68cb, type: 2}
+  - {fileID: 11400000, guid: f15721e1fdddd21459c07a647eeb452a, type: 2}
+  - {fileID: 11400000, guid: b96110d7a2318b7479431f2110e37a97, type: 2}
+  - {fileID: 11400000, guid: 845ebc14e4d7e094185da3a311e32c0a, type: 2}
+--- !u!4 &1140432037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140432035}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1140432038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140432035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 3ffc8f6c570a2ba4d8a93175ebaf5704,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1140432036}
+        m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
+        m_MethodName: OnTap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b6226596-5335-42d8-82a4-3ca8dcdd3c15
+    m_ActionName: Touch/tap
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cece9dde-1baa-4020-8024-3259ad8f39db
+    m_ActionName: Touch/press
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 36cdc45c-997c-41bf-8dcf-1bfb5747b08c
+    m_ActionName: Touch/double?
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1598f81e-a6e6-4ac3-9acb-040cbc200125
+    m_ActionName: Touch/New action
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Touch
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1173063318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,10 +1623,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1189147698}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetImage
-        m_Mode: 1
+        m_MethodName: SetSelectedImage
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1554,7 +1680,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189147693}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
@@ -1562,6 +1688,8 @@ MonoBehaviour:
   _prefab: {fileID: 6002189062251155254, guid: 9727ed8ae29005040b4ec1849ee3b3dc, type: 3}
   trailPrefab: {fileID: 4468060690977817901, guid: 7cf6eeadf03bed54f81024eee3dff4a3,
     type: 3}
+  _gameImage: []
+  _gameColor: []
 --- !u!1 &1251816840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,14 +1773,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1251816845}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetColor
-        m_Mode: 1
+        m_MethodName: SetSelecctedColor
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1702,13 +1830,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251816840}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
   trailPrefab: {fileID: 0}
+  _gameImage: []
+  _gameColor: []
 --- !u!1 &1958413625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,10 +1922,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1958413630}
+      - m_Target: {fileID: 1140432036}
         m_TargetAssemblyTypeName: ClassTouch, Assembly-CSharp
-        m_MethodName: GetColor
-        m_Mode: 1
+        m_MethodName: SetSelecctedColor
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1849,13 +1979,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958413625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0ebded4339ce134aa2d08633c93fea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 0}
   trailPrefab: {fileID: 0}
+  _gameImage: []
+  _gameColor: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1865,3 +1997,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1173063322}
   - {fileID: 476409250}
+  - {fileID: 1140432037}
